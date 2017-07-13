@@ -1,0 +1,134 @@
+body{
+	font-size: 13px!important;
+	background: #e6ecf0;
+}
+ul{
+	margin-top: 6px;
+	margin-bottom: 0px;
+	height: 30px;
+}
+.menu_list li{
+	display: inline-block;
+	margin-left: 20px;
+	    height: 46px;
+	    color: #66757f
+}
+
+.menu_list li a{
+	font-weight: bold;
+};
+
+.menu_list li  a:focus {
+    color: #1DA1F2;
+}
+
+.menuRight{
+	text-align: left;
+	display: inline-block;
+}
+.top_bar{
+	background-color: white;
+}
+.form-control{
+	font-size: 13px!important;
+}
+.btn{
+	font-size: 13px!important;
+	border-radius: 1rem;
+}
+.white_section{
+	background-color: white;
+	margin-top: 10px;
+}
+
+.white{
+	background-color: white;
+
+}
+.name{
+	text-align: center;
+	margin-top: 50px;
+}
+
+a{
+	font-weight: bold;
+}
+.text_separator_10{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.strong{
+	font-weight: bold;
+}
+.profile_footer{
+	text-align: center;
+}
+.header_profile{
+	background-color: #1DA1F2 !important;
+	height:70px;
+}
+.trends_header{
+	margin-top: 10px;
+
+}
+.trends_header p{
+	font-weight: bold;
+	font-size: 20px;
+}
+.info_trends{
+	font-size: 13px;
+	color: gray!important;
+	font-weight: normal;
+}
+.trends_body {
+	font-size: 15px!important;
+}
+
+.related_users{
+	font-size: 15px!important;
+}
+.related_users p{
+	margin-bottom: 0px;
+}
+.tweet{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.top_main{
+	padding: 0;
+	background-color:#E8F5FD;
+}
+.text_right {
+	text-align: right;
+	margin-bottom: 10px;
+}
+.characters{
+	margin-right: 10px;
+}
+.center{
+	text-align: center;
+}
+.older{
+	padding: 0;
+	border-left: 1px solid #b3c3ce;
+    border-right: 1px solid #b3c3ce;
+    background-clip: padding-box;
+}
+.new_tweets{
+	height: 40px;
+}
+.new_tweets span{
+	margin-top: 20px;
+}
+.main_tweet{
+	margin-top: 20px;
+	margin-bottom:20px;
+	border-bottom: 1px solid #b3c3ce;
+}
+hr{
+	    margin-top: 10px;
+}
+.login{
+	width: 40%;
+	margin-top: 200px;
+}

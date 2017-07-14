@@ -13,10 +13,22 @@ import {fetchUser} from '../actions/index'
 			<div className="col-md-12 white_section">
 			{console.log(this.props)}
 				<div className="header_profile"></div>
-				<div className="name">
-					<h4>{this.props.user.name} </h4>
-					<p>@{this.props.user.email}</p>
-				</div>
+					<div className="row">
+						<div className="col-md-5 ">
+
+							<img className="tweet_image_3" src="http://localhost:8000/twitter.jpg"/>
+
+						</div>
+						<div className="col-md-7 ">
+							<div className="">
+								<h4>User name </h4>
+								<p>@{this.props.user.email}</p>
+							</div>
+
+						</div>
+					</div>
+
+
 				<div className="col-md-4 profile_footer">
 					<a href="">Tweets<br/> {this.props.user.tweets}</a>
 

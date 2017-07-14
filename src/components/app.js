@@ -9,19 +9,18 @@ export default class App extends Component {
 
   render() {
     return (
-
       <div>
       	<TopBar/>
       	<div className="container">
       		<div className="col-md-3">
-  	    		<LeftSection email={this.props.params.email}/>
+  	    		<LeftSection email={this.props.params.email?this.props.params.email:1}/>
   	    	</div>
   	    	<div className="col-md-6 ">
 
 
   	    		<div className="">
 
-    					<MainSection email={this.props.params.email}/>
+    					<MainSection email={this.props.params.email?this.props.params.email:1}/>
 
     				</div>
   	    	</div>

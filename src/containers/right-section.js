@@ -10,24 +10,66 @@ export default class RightSection extends Component{
 					<p>Who to follow</p>
 				</div>
 				<div className="related_users">
-					<p>
-						<span className="text_separator_10">Leonardo</span><a href="">@LeonardoAleman <br/> <div className="info_trends"></div><p></p></a>
-						 <input type="button" className="btn btn-default" value="Follow"/>
-					</p>
-					<hr/>
-					<p>
-						<span className="text_separator_10">Leonardo</span><a href="">@LeonardoAleman <br/> <div className="info_trends"></div><p></p></a>
-						 <input type="button" className="btn btn-info" value="Follow"/>
-					</p>
-					<hr/>
-					<p>
-						<span className="text_separator_10">Leonardo</span><a href="">@LeonardoAleman <br/> <div className="info_trends"></div><p></p></a>
-						 <input type="button" className="btn btn-info" value="Follow"/>
-					</p>
-					<hr/>
+							<div className="col-md-12  content_tweet">
+		            			<div className="col-md-3">
+		            				<a><img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/></a>
+								</div>
+		            			<div className="col-md-8 col-md-offset-1  main_tweet">
+									<p>
+										<span className="strong fullname">SomeUser </span>
+										<span className="text_separator_10 username">@mail</span>
+
+									</p>
+									<p>
+										<input type="button" className="btn btn-default" value="Follow"/>
+									</p>
+
+									<br/>
+								</div>
+
+							</div>
+							<div className="col-md-12  content_tweet">
+		            			<div className="col-md-3">
+		            				<a><img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/></a>
+								</div>
+		            			<div className="col-md-8 col-md-offset-1  main_tweet">
+									<p>
+										<span className="strong fullname">SomeUser </span>
+										<span className="text_separator_10 username">@mail</span>
+
+									</p>
+									<p>
+										<input type="button" className="btn btn-default" value="Follow"/>
+									</p>
+
+									<br/>
+								</div>
+
+							</div>
+							<div className="col-md-12  content_tweet">
+		            			<div className="col-md-3">
+		            				<a><img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/></a>
+								</div>
+		            			<div className="col-md-8 col-md-offset-1  main_tweet">
+									<p>
+										<span className="strong fullname">SomeUser </span>
+										<span className="text_separator_10 username">@mail</span>
+
+									</p>
+									<p>
+										<input type="button" className="btn btn-default" value="Follow"/>
+									</p>
+
+									<br/>
+								</div>
+
+							</div>
 
 
-				</div>
+
+
+					</div>
+
 			</div>
 		</div>
 

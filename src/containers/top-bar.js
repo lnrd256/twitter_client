@@ -3,34 +3,32 @@ import React, {Component} from 'react';
 export default class TopBar extends Component{
 	render(){
 		return (
-				<div className="top_bar">
-					<nav className="navbar navbar-default">
-						<div className="col-md-6">
-						<ul className="menu_list">
-							<li><a href="">Home</a></li>
-							<li><a href="">Notifications</a></li>
-							<li><a href="">Menssages</a></li>
-						</ul>
-					</div>
+		<header className="clearfix">
+                <div className="navbar navbar-default">
+                	<div className="container">
+	                	<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1 container">
+	                        <ul className="nav navbar-nav navbar-left">
+	                            <li><a href="#"><strong><span className="glyphicon glyphicon-home"></span> Home</strong></a></li>
+	                            <li><a href="#"><strong><span className="glyphicon glyphicon-bell"></span>Notifications</strong></a></li>
+	                            <li><a href="#"><strong><span className="glyphicon glyphicon-envelope"></span> Messages</strong></a></li>
+	                        </ul>
+	                        <ul className="nav navbar-nav navbar-right">
+	                          <form action="" className="search-form">
+					                <div className="form-group has-feedback">
+					            		<label for="search" className="sr-only">Search Tweet</label>
+					            		<input type="text" className="form-control" name="search" id="search" placeholder="search"/>
+					              		<span className="glyphicon glyphicon-search form-control-feedback"></span>
+					            	</div>
+					            </form>
+	                        </ul>
+	                    </div>
 
-					<div className="menuRight col-md-5">
-
-						<div className="input-group">
-					      <input type="text" className="form-control" placeholder="Search Twitter..."/>
-					      <span className="input-group-btn">
-					        <button className="btn btn-default" type="button">Go!</button>
-					      </span>
-					    </div>
-					</div>
-					<div className="menuRight col-md-1">
+                	</div>
 
 
+                </div>
+            </header>
 
-					</div>
-
-					</nav>
-
-				</div>
 			);
 	}
 }

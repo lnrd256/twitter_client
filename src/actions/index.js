@@ -2,7 +2,9 @@ import axios from 'axios';
 import qs from 'qs';
 export const FETCH_USER='FETCH_USER';
 export const FETCH_TWEETS='FETCH_TWEETS';
+export const FETCH_TWEETS_USER='FETCH_TWEETS_USER';
 export const CREATE_TWEET='CREATE_TWEET';
+
 const ROOT_URL='http://localhost:8000'
 export function fetchUser(id){
 	const request =axios.get(`${ROOT_URL}/user/${id}`)
@@ -12,9 +14,16 @@ export function fetchUser(id){
 	}
 }
 export function fetchTweets(id){
-	const request =axios.get(`${ROOT_URL}/usertweet/${id}`)
+	const request =axios.get(`${ROOT_URL}/tweet`)
 	return{
 		type: FETCH_TWEETS,
+		payload:request
+	}
+}
+export function fetchUserTweets(id){
+	const request =axios.get(`${ROOT_URL}/usertweet/${id}`)
+	return{
+		type: FETCH_TWEETS_USER,
 		payload:request
 	}
 }

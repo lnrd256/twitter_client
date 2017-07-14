@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {createTweet,fetchTweets,fetchUser} from '../actions/index'
+import {createTweet,fetchTweets,fetchUser,fetchUserTweets} from '../actions/index'
 
 class MainSection extends Component{
 		constructor(props){
@@ -22,38 +22,48 @@ class MainSection extends Component{
 			let form={tweet:this.state.term,user_id:this.props.email};
 			this.setState({term:''})
 			this.props.createTweet(form).then(()=>{
-				this.props.fetchTweets(1);
+				this.props.fetchUserTweets(this.props.email);
 				this.props.fetchUser(this.props.email);
 			});
 
 		}
 	}
 	componentWillMount(){
-		this.props.fetchTweets(1);
+		this.props.fetchTweets(this.props.email);
 	}
 	reply(email){
 		this.setState({term:'@'+email+' '})
 	}
 	newTweets(){
- 		this.props.fetchTweets(1);
+ 		this.props.fetchTweets(this.props.email);
  	}
 	renderCursos(){
 		return(
 			this.props.tweets.map((tweet)=>{
 	            return(
-	            		<div className="col-md-12  main_tweet">
-						<p>
-							<span className="strong">{tweet.name}</span>
-							<span className="text_separator_10">@{tweet.email}</span>
+	            		<div className="col-md-12  content_tweet">
+	            			<div className="col-md-1">
+	            				<a><img className="tweet_image" src="http://localhost:8000/twitter.jpg"/></a>
+							</div>
+	            			<div className="col-md-10 col-md-offset-1  main_tweet">
+								<p>
+									<span className="strong fullname">SomeUser </span>
+									<span className="text_separator_10 username">@{tweet.email}</span>
 
-						</p>
-						<p>
-							{tweet.tweet}
-						</p>
-						<p>
-							<a onClick={() => this.reply(tweet.email)}  href="#">Reply</a>
-						</p>
-					</div>
+								</p>
+								<p>
+									{tweet.tweet}
+								</p>
+								<p className="tweet_section">
+									<a className="paddind_left" data-toggle="tooltip" data-placement="top" title="Reply" onClick={() => this.reply(tweet.email)}  href="#"><i className="fa fa-comment-o paddind_left" aria-hidden="true"></i>	</a>
+									<a className="paddind_left"  data-toggle="tooltip" data-placement="top" title="Retweet"onClick={() => this.reply(tweet.email)}  href="#"><i className="fa fa-retweet paddind_left" aria-hidden="true"></i>	</a>
+									<a className="paddind_left"  data-toggle="tooltip" data-placement="top" title="Like"onClick={() => this.reply(tweet.email)}  href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a>
+									<a className="paddind_left"  data-toggle="tooltip" data-placement="top" title="Message"onClick={() => this.reply(tweet.email)}  href="#"><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
+
+								</p>
+							</div>
+						</div>
+
 	                     )})
 			)
 	}
@@ -66,7 +76,11 @@ class MainSection extends Component{
 		return(
 			<div className=" ">
 				<div className="col-md-12 white_section top_main" >
-					<div className="col-md-12">
+
+					<div className="col-md-1">
+						<img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/>
+					</div>
+					<div className="col-md-11">
 						<textarea
 						className="form-control tweet"
 						onChange={this.onInputChange}
@@ -111,4 +125,4 @@ function mapStateToPropos(state){
 	return {tweets:state.toJS().tweets.all}
 
 }
-export default connect(mapStateToPropos,{createTweet,fetchTweets,fetchUser})(MainSection);
+export default connect(mapStateToPropos,{createTweet,fetchTweets,fetchUser,fetchUserTweets})(MainSection);

@@ -25,7 +25,7 @@ export default class App extends Component {
     				</div>
   	    	</div>
   	    	<div className="col-md-3">
-  	    		<RightSection/>
+  	    		<RightSection email={this.props.params.email?this.props.params.email:1}/>
   	    	</div>
       	</div>
       </div>

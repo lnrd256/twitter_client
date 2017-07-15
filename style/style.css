@@ -1,5 +1,5 @@
 body{
-	font-family:  Arial, sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 13px!important;
 	background: #e6ecf0;
 }
@@ -29,6 +29,10 @@ ul{
 }
 .top_bar{
 	background-color: white;
+}
+.top_left_section{
+  padding-left: 0;
+  padding-right: 0;
 }
 .form-control{
 	font-size: 13px!important;
@@ -71,15 +75,15 @@ a{
 }
 .header_profile{
 	background-color: #1DA1F2 !important;
-	height:70px;
+	height:95px;
 }
 .trends_header{
 	margin-top: 10px;
 
 }
 .trends_header p{
-	font-weight: bold;
-	font-size: 20px;
+	    font-size: 18px;
+    font-weight: bold;
 }
 .info_trends{
 	font-size: 13px;
@@ -116,19 +120,22 @@ a{
 }
 .older{
 	padding: 0;
-	border-left: 1px solid #b3c3ce;
-    border-right: 1px solid #b3c3ce;
     background-clip: padding-box;
+    background-color: #f5f8fa;
+        border-bottom: 1px solid #ccd6dd;
+    border-top: 1px solid #ccd6dd;
+}
+.older:hover{
+      background-color: #e6ecf0;
+    border: 1px solid #ccd6dd;
 }
 .new_tweets{
 	height: 40px;
 	font-weight: normal;
 	font-size: 14px;
 }
-.new_tweets span{
-	margin-top: 20px;
-}
 .main_tweet{
+  margin-left: 40px;
 
 	margin-top: 20px;
 	padding-left: 0;
@@ -239,11 +246,13 @@ width: 200%;
 	border-radius: 50%;
     background-size: 100% auto;
 }
-.tweet_image_3{
-width: 100%;
-
-	border-radius: 50%;
+.tweet_image_3 {
+    width: 100%;
+    border-radius: 50%;
     background-size: 100% auto;
+    margin-top: -40px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .search-form .form-group {
@@ -346,4 +355,57 @@ width: 100%;
 	background-color: #55acee;
 	font-weight: bold;
 	font-size: 15px!important;
+}
+.button_bar:hover{
+  background-color: #4AB3F4;
+}
+.tweet_image_input{
+  width: 200%;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+textarea.tweet{
+  height:35px;
+}
+.load_tweets{
+      padding: 10px 1px;
+    display: inline-block;
+    color: #1da1f2;
+}
+h4{
+  font-weight: bold;
+}
+.username_id{
+
+      font-size: 14px;
+    color: #657786;
+}
+a:focus , a:hover{
+      color: #1DA1F2;
+}
+.count_footer{
+  display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+     width: 1240px;
+    }
+    .clearfix :{
+        width: 1240px;
+            margin-right: auto;
+    margin-left: auto;
+    }
+}
+.main_recommended {
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 14px;
+    padding-right: 0px;
 }

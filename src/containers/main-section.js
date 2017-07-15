@@ -37,15 +37,26 @@ class MainSection extends Component{
 	newTweets(){
  		this.props.fetchTweets(this.props.email);
  	}
+ 	changeCss(){
+ 		$('.inv').show();
+ 		$('textarea').css('height', '50px');
+
+ 	}
+ 	minimizeInput(){
+ 		if($('textarea').val().length==0){
+ 			$('.inv').hide();
+ 			$('textarea').css('height', '35px');
+ 		}
+ 	}
 	renderCursos(){
 		return(
 			this.props.tweets.map((tweet)=>{
 	            return(
-	            		<div className="col-md-12  content_tweet">
-	            			<div className="col-md-1">
+	            		<div className="col-md-12 col-sm-12 col-xs-12  content_tweet">
+	            			<div className="col-md-1 col-sm-1 col-xs-1">
 	            				<a><img className="tweet_image" src="http://localhost:8000/twitter.jpg"/></a>
 							</div>
-	            			<div className="col-md-10 col-md-offset-1  main_tweet">
+	            			<div className="col-md-10 col-sm-10 col-xs-10 col-md-offset-1  main_tweet">
 								<p>
 									<span className="strong fullname">SomeUser </span>
 									<span className="text_separator_10 username">@{tweet.email}</span>
@@ -75,19 +86,21 @@ class MainSection extends Component{
 		}else
 		return(
 			<div className=" ">
-				<div className="col-md-12 white_section top_main" >
+				<div className="col-md-12 col-sm-12 col-xs-12  white_section top_main" >
 
-					<div className="col-md-1">
-						<img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/>
+					<div className="col-md-1 col-sm-1 col-xs-1">
+						<img className="tweet_image_input" src="http://localhost:8000/twitter.jpg"/>
 					</div>
-					<div className="col-md-11">
+					<div className="col-md-11 col-sm-11">
 						<textarea
 						className="form-control tweet"
 						onChange={this.onInputChange}
+						onFocus = {this.changeCss}
+						onBlur={this.minimizeInput}
 						value={this.state.term}
 						></textarea>
-						<div className="col-md-12 text_right">
-							<span className="characters">{140-this.state.term.length} </span>
+						<div className="col-md-12 col-sm-12 col-xs-12 col-sm-12 text_right inv" hidden>
+							<span className="characters ">{140-this.state.term.length} </span>
 							<input type="button" className="btn btn-info right" id="" onClick={this.sendTweet} disabled={this.state.input} value="Tweet"/>
 						</div>
 
@@ -96,18 +109,17 @@ class MainSection extends Component{
 
 
 				</div>
-				<div className="col-md-12 older">
+				<div className="col-md-12 col-sm-12 col-xs-12 older">
 					<a href="#" onClick={() => this.newTweets()}>
-						<div className="col-md-12 center new_tweets">
-							<br/>
-							<span>Load New Tweets</span>
+						<div className="col-md-12 col-sm-12 col-xs-12 center new_tweets">
+							<span className="load_tweets">Load New Tweets</span>
 
 						</div>
 					</a>
 
 
 				</div>
-				<div className="col-md-12 white">
+				<div className="col-md-12 col-sm-12 col-xs-12 white">
 					{this.renderCursos()}
 
 

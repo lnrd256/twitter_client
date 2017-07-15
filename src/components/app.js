@@ -12,10 +12,10 @@ export default class App extends Component {
       <div>
       	<TopBar/>
       	<div className="container">
-      		<div className="col-md-3">
+      		<div className="col-md-3 col-xs-3 col-sm-3">
   	    		<LeftSection email={this.props.params.email?this.props.params.email:1}/>
   	    	</div>
-  	    	<div className="col-md-6 ">
+  	    	<div className="col-md-6 col-md-6 col-xs-6 col-sm-6">
 
 
   	    		<div className="">
@@ -24,7 +24,7 @@ export default class App extends Component {
 
     				</div>
   	    	</div>
-  	    	<div className="col-md-3">
+  	    	<div className="col-md-3 col-xs-3 col-sm-3">
   	    		<RightSection email={this.props.params.email?this.props.params.email:1}/>
   	    	</div>
       	</div>

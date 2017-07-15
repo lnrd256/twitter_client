@@ -10,11 +10,11 @@ import {fetchUsers} from '../actions/index'
  		return(
  			this.props.users.map((user)=>{
  				return(
-	            	<div className="col-md-12  content_tweet">
-		            			<div className="col-md-3">
+	            	<div className="col-md-12 col-sm-12 col-xs-12  content_tweet">
+		            			<div className="col-md-3 col-sm-3 col-xs-3">
 		            				<a><img className="tweet_image_2" src="http://localhost:8000/twitter.jpg"/></a>
 								</div>
-		            			<div className="col-md-8 col-md-offset-1  main_tweet">
+		            			<div className="col-md-8 col-sm-8 col-xs-8 col-md-offset-1  main_recommended">
 									<p>
 										<span className="strong fullname">SomeUser </span>
 										<span className="text_separator_10 username">@{user.email.substring(0, 3)}..</span>
@@ -39,7 +39,7 @@ import {fetchUsers} from '../actions/index'
 		return(
 		<div>
 
-			<div className="col-md-12 white_section">
+			<div className="col-md-12 col-sm-12 col-xs-12 white_section">
 				<div className="trends_header">
 					<p>Who to follow</p>
 				</div>

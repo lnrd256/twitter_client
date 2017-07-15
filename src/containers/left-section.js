@@ -10,37 +10,40 @@ import {fetchUser} from '../actions/index'
 	renderUser(){
 		return(
 
-			<div className="col-md-12 white_section">
+			<div className="col-md-12 white_section top_left_section">
 			{console.log(this.props)}
 				<div className="header_profile"></div>
 					<div className="row">
-						<div className="col-md-5 ">
+						<div className="col-md-5 col-sm-5 col-xs-5 ">
 
 							<img className="tweet_image_3" src="http://localhost:8000/twitter.jpg"/>
 
 						</div>
-						<div className="col-md-7 ">
+						<div className="col-md-7 col-sm-7 col-xs-7">
 							<div className="">
 								<h4>User name </h4>
-								<p>@{this.props.user.email}</p>
+								<p className="username_id">@{this.props.user.email}</p>
 							</div>
+
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-4 col-sm-4 col-xs-4 profile_footer">
+							<a href="">Tweets<br/> <span className="count_footer">{this.props.user.tweets}</span></a>
+
+						</div>
+						<div className="col-md-4 col-sm-4 col-xs-4 profile_footer">
+							<a href="">Following<br/><span className="count_footer">{this.props.user.following}</span> </a>
+
+						</div>
+						<div className="col-md-4 col-sm-4 col-xs-4 profile_footer">
+							<a href="">Followers<br/><span className="count_footer"> {this.props.user.follower}</span> </a>
 
 						</div>
 					</div>
 
 
-				<div className="col-md-4 profile_footer">
-					<a href="">Tweets<br/> {this.props.user.tweets}</a>
 
-				</div>
-				<div className="col-md-4 profile_footer">
-					<a href="">Following<br/> {this.props.user.following}</a>
-
-				</div>
-				<div className="col-md-4 profile_footer">
-					<a href="">Followers<br/> {this.props.user.follower}</a>
-
-				</div>
 			</div>
 			)
 	}

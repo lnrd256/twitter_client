@@ -24,7 +24,6 @@ import {fetchUsers} from '../actions/index'
 										<input type="button" className="btn btn-default" value="Follow"/>
 									</p>
 
-									<br/>
 								</div>
 
 							</div>
